@@ -19,21 +19,21 @@
             can be considered an assembly language. Usually, these languages are written to be very intimate with
             the computer <a href="hardwaremain.html">hardware</a>, and are effectively direct translations of the  
             CPU's machine code instructions. <br><br>
-            For example, the JUMP command takes an 11-bit argument, so if the computer is told to JUMP to an address 
+            For example, the JMP (Jump) command takes a 16-bit argument, so if the computer is told to JUMP to an address 
             labelled 312, the Assembly instruction would be "JUMP 312", and the machine would interpret that as 
-            "01101-00100111000". Here, the first five bits, 01101, refer to the JUMP command, and the remaining 11 bits 
+            "100010-0000000100111000". Here, the first six bits, 100010, refer to the JUMP command, and the remaining 16 bits 
             are the binary value for 312. <br><br><br>
         </p>
         <h3>
             Defining the Tower of Babel Assembly Language:
         </h3>
         <p>
-            When designing a computer as far down as this, you are allowed all sorts of liberties when defining your 
-            custom assembly code. As long as there is a hardware operation that can be defined withing your computer, 
+            The engineer building the computer is allowed all sorts of liberties when defining their custom assembly 
+            code. As long as there is a hardware operation that can be defined withing your computer, 
             you are allowed to make it do whatever you want. I went with a few basic operations, added a physical 
             <a href="stack.html">instruction stack</a>, complete with a counter, RAM addresses, and full integration 
-            into the assembly. The idea of recursive assembly code scares me a little bit, so that will be used in 
-            higher level languages. Addition of a stack in hardware is completely optional, since it can be easily 
+            into the assembly. This addition makes low-level loops much easier, due to the possibility of incorporating
+            recursive assembly code. Addition of a stack in hardware is completely optional, since it can be easily 
             replicated through software alone, but my instruction RAM sizes were already a little bit smaller than I 
             would have liked, so I allotted an extra slice of memory for it. <br><br><br>
         </p>
@@ -45,6 +45,6 @@
             To find each microinstruction, as well as the control logic that runs the code, click 
             <a href="controllogic.html">here.</a>
         </h5>
-        <iframe style="width: 100%;height: 700px; border:3px solid black;"src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBIQ_vJglmYuKO7Afc00qMGmBG1bnyCZl8rWRP0Ka05-fg1nSqtrRbcJDtODc95NtOcb7qlZCtV2s7/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <iframe style="width: 100%;height: 700px; border:3px solid black;"src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBIQ_vJglmYuKO7Afc00qMGmBG1bnyCZl8rWRP0Ka05-fg1nSqtrRbcJDtODc95NtOcb7qlZCtV2s7/pubhtml?gid=1157127489&single=true"></iframe>
     </body>
 </html>
